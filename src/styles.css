@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+.warning{
+    color: red;
+  }
+  body {
+    margin: 0px;
+    background-image: url("./img/back.jpg") ;
+    background-repeat: inherit;
+    background-size: 100%, cover;
+   color:aqua;
+  
+  }
+  

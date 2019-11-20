@@ -1,0 +1,18 @@
+<h1>
+
+  LOGIN
+</h1>
+
+       <div>
+        <label for="">Usuario</label><br>
+        <input type="text" [(ngModel)]="user" >
+       </div>
+
+         <div>
+          <label for="">Password</label><br>
+          <input type="password" [(ngModel)]="password">
+         </div>
+         <input (click)="login()" type="submit" class="btn btn-primary">
+         <div class="warning">
+          {{message}}
+      </div>

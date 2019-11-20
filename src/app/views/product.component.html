@@ -1,0 +1,112 @@
+<h1>
+
+    List of products
+  </h1>
+  <div class="master-container">
+      <div class="container-Product">
+
+   
+          <div>
+            <label for="">ProductName</label><br>
+            <input type="text" [(ngModel)]="ProductName" placeholder="Product Name">
+           
+          <br>
+          <div class="warning">
+              {{message}}
+          </div>
+          <br>
+          <div>
+            {{name}}
+           
+          </div>
+          </div>
+          <br>
+          
+          <div>
+            <label for="">Pice-Product</label><br>
+            <input type="number"[(ngModel)]="ProductCost" placeholder="USD">
+           
+            <br>
+            <div class="warning">
+                {{message1}}
+            </div>
+          
+            <br>
+          
+            <div>
+             {{result}}
+            </div>
+          </div>
+          <br>
+          <div>
+              <label for="">Orders</label><br>
+              <input type="number"[(ngModel)]="ProductPedido" placeholder="How Many Products">
+             
+              <br>
+              <div class="warning">
+                  {{message2}}
+              </div>
+          
+              <br>
+          
+              <div>
+               {{pedidos}}
+              </div>
+          </div>
+          
+          <br>
+          <div>
+              <label for="">Contact</label><br>
+              <input type="text"[(ngModel)]="ProductContact" placeholder="Contact">
+             
+              <br>
+              <div class="warning">
+                  {{message3}}
+              </div>
+          
+              <br>
+          
+              <div>
+               {{contactoCliente}}
+              </div>
+          </div>
+          <br>
+        
+            <input type="submit" (click)="submit()">
+        <button (click)="cambioboton()" (click)="displayTable()">Show table</button>
+       
+    
+    </div>
+
+    <div *ngIf="showTable" class="table-container">
+        <table class="table-products">
+          <thead>
+            
+            <tr>
+    
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Type</th>
+              <th>Contact</th>
+    
+            </tr>
+    
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of listOfProducts">
+    
+              <td>{{p.name}}</td>
+              <td>{{p.price}}</td>
+              <td>{{p.type}}</td>
+              <td>{{p.contact}}</td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+   
+ 
+    
+  </div>
+
+
+ 
